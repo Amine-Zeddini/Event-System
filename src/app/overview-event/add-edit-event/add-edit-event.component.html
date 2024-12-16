@@ -1,0 +1,112 @@
+<!-- <dx-popup
+  [(visible)]="editAddPopupVisible"
+  title="{{ isEditMode ? 'Edit Event' : 'Add Event' }}"
+  [width]="600"
+  [height]="600"
+  [showTitle]="true"
+  [dragEnabled]="true"
+  [closeOnOutsideClick]="true"
+  (onHiding)="close()"
+>
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+  </div>
+
+  <dx-form
+    [(formData)]="newEvent"
+    [validationGroup]="'EventForm'"
+    [showColonAfterLabel]="true"
+    [labelLocation]="'top'"
+    [colCount]="2"
+  >
+    <dxi-item dataField="id" editorType="dxTextBox" [visible]="false"></dxi-item>
+
+    <dxi-item dataField="title">
+      <dx-validator>
+        <dxi-validation-rule type="required" message="Title is required"></dxi-validation-rule>
+      </dx-validator>
+    </dxi-item>
+
+    <dxi-item dataField="description">
+      <dx-validator>
+        <dxi-validation-rule type="required" message="Description is required"></dxi-validation-rule>
+      </dx-validator>
+    </dxi-item>
+
+    <dxi-item dataField="dateTime" editorType="dxDateBox">
+      <dx-validator>
+        <dxi-validation-rule type="required" message="Date and time are required"></dxi-validation-rule>
+      </dx-validator>
+    </dxi-item>
+
+    <dxi-item dataField="location">
+      <dx-validator>
+        <dxi-validation-rule type="required" message="Location is required"></dxi-validation-rule>
+      </dx-validator>
+    </dxi-item>
+
+    <dxi-item dataField="organizer">
+      <dx-validator>
+        <dxi-validation-rule type="required" message="Organizer is required"></dxi-validation-rule>
+      </dx-validator>
+    </dxi-item>
+
+    <dxi-item dataField="capacity">
+      <dx-validator>
+        <dxi-validation-rule type="required" message="Capacity is required"></dxi-validation-rule>
+        <dxi-validation-rule type="numeric" message="Capacity must be a number"></dxi-validation-rule>
+      </dx-validator>
+    </dxi-item>
+
+    <dxi-item dataField="isOnline">
+      <dx-radio-group
+        [items]="['Yes', 'No']"
+        [(value)]="newEvent.isOnline"
+        [valueExpr]="'value'"
+        [displayExpr]="'text'"
+      ></dx-radio-group>
+    </dxi-item>
+  </dx-form>
+
+  <div class="popup-actions">
+    <dx-button
+      text="Cancel"
+      (onClick)="close()"
+      [width]="120"
+      style="margin-right: 10px"
+    ></dx-button>
+    <dx-button
+      text="Save"
+      (onClick)="submitForm()"
+      [width]="120"
+      [type]="'success'"
+    ></dx-button>
+  </div>
+</dx-popup> -->
+
+<dx-popup
+  [(visible)]="editAddPopupVisible"
+  title="{{ isEditMode ? 'Edit Event' : 'Add Event' }}"
+  [width]="600"
+  [height]="600"
+  [showTitle]="true"
+  [dragEnabled]="true"
+  [closeOnOutsideClick]="true"
+  (onHiding)="close()">
+  <dx-form
+    [(formData)]="newEvent"
+    [validationGroup]="'EventForm'">
+    <dxi-item dataField="title" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="description" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="dateTime" editorType="dxDateBox" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="location" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="organizer" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="capacity" editorType="dxNumberBox" [isRequired]="true"></dxi-item>
+    <dxi-item dataField="isOnline" editorType="dxRadioGroup" [editorOptions]="{ items: ['Yes', 'No'] }"></dxi-item>
+  </dx-form>
+  <div class="popup-actions">
+    <dx-button text="Cancel" (onClick)="close()" [type]="'normal'"></dx-button>
+    <dx-button text="Save" (onClick)="submitForm()" [type]="'success'"></dx-button>
+  </div>
+</dx-popup>
+

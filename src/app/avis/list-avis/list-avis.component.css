@@ -1,0 +1,9 @@
+.align-right {
+  margin-left: 200px;
+}
+h1 {
+  text-align: center; /* Centre le texte horizontalement */
+  font-size: 36px; /* Ajustez la taille de la police si nécessaire */
+  color: #333; /* Change la couleur selon vos besoins */
+  margin: 20px 0; /* Ajoute un espacement vertical autour de l'en-tête */
+}

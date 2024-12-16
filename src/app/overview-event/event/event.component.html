@@ -1,0 +1,169 @@
+<!-- <div class="scroll-container"> 
+    <dx-data-grid 
+      [dataSource]="events" 
+      [showBorders]="true" 
+      class="data-grid" 
+      [allowColumnReordering]="true"
+      (onExporting)="onExporting($event)" 
+      (onOptionChanged)="onGridOptionChanged($event)" 
+      [grouping]="{ autoExpandAll: true, contextMenuEnabled: true }"
+      [paging]="{ enabled: true, pageSize: 15 }" 
+      [columnChooser]="{ enabled: true }" 
+      [headerFilter]="{ visible: true }" 
+      [columnHidingEnabled]="false"
+      [pager]="{
+        showPageSizeSelector: true,
+        allowedPageSizes: [10, 20, 50],
+        showInfo: true
+      }"
+      [allowColumnResizing]="true"
+      [stateStoring]="{ enabled: true, type: 'localStorage', storageKey: 'gridState' }"
+      [scrolling]="{ mode: 'virtual' }"
+      [selection]="{ mode: 'multiple' }">
+      
+      <dxo-search-panel 
+        [visible]="true" 
+        [highlightSearchText]="true" 
+        [width]="240" 
+        [placeholder]="'Search...'">
+      </dxo-search-panel>
+      <dxo-export 
+        [enabled]="true" 
+        fileName="EventDataGrid" 
+        [allowExportSelectedData]="true">
+      </dxo-export>
+      <dxo-filter-row [visible]="true"></dxo-filter-row>
+      <dxo-group-panel [visible]="true"></dxo-group-panel>
+  
+      <dxi-column 
+        dataField="title" 
+        caption="Title" 
+        [allowSorting]="true" 
+        [allowFiltering]="true" 
+        [allowGrouping]="true">
+      </dxi-column>
+      <dxi-column 
+        dataField="description" 
+        caption="Description" 
+        [allowSorting]="true" 
+        [allowFiltering]="true" 
+        [allowGrouping]="true">
+      </dxi-column>
+      <dxi-column 
+        dataField="dateTime" 
+        caption="Date & Time" 
+        [allowSorting]="true" 
+        [allowFiltering]="true" 
+        [allowGrouping]="true">
+      </dxi-column>
+      <dxi-column 
+        dataField="location" 
+        caption="Location" 
+        [allowSorting]="true" 
+        [allowFiltering]="true" 
+        [allowGrouping]="true">
+      </dxi-column>
+      <dxi-column 
+        dataField="organizer" 
+        caption="Organizer" 
+        [allowSorting]="true" 
+        [allowFiltering]="true" 
+        [allowGrouping]="true">
+      </dxi-column>
+      <dxi-column 
+        dataField="capacity" 
+        caption="Capacity" 
+        [allowSorting]="true" 
+        [allowFiltering]="true" 
+        [allowGrouping]="true">
+      </dxi-column>
+      <dxi-column 
+        dataField="isOnline" 
+        caption="Online Event" 
+        [allowSorting]="true" 
+        [allowFiltering]="true" 
+        [allowGrouping]="true">
+      </dxi-column>
+
+    </dx-data-grid>
+    <dx-toast 
+      [visible]="toastVisible" 
+      [message]="'Notification Message'" 
+      [type]="'success'" 
+      (onHidden)="toastVisible = false">
+    </dx-toast>
+  </div> -->
+
+
+  <div class="add-participant">
+    <button (click)="openAddPopup()">Add Event</button>
+  </div>
+  
+  
+  <div class="scroll-container"> 
+    <dx-data-grid 
+      [dataSource]="events" 
+      [showBorders]="true" 
+      class="data-grid"
+      [allowColumnReordering]="true"
+      (onExporting)="onExporting($event)" 
+      (onOptionChanged)="onGridOptionChanged($event)"
+      [grouping]="{ autoExpandAll: true, contextMenuEnabled: true }"
+      [paging]="{ enabled: true, pageSize: 5 }"
+      [columnChooser]="{ enabled: true }"
+      [headerFilter]="{ visible: true }"
+      [pager]="{
+        showPageSizeSelector: true,
+        allowedPageSizes: [10, 20, 50],
+        showInfo: true
+      }"
+      [allowColumnResizing]="true"
+      [stateStoring]="{ enabled: true, type: 'localStorage', storageKey: 'gridState' }"
+      [scrolling]="{ mode: 'virtual' }"
+      [selection]="{ mode: 'multiple' }">
+  
+      <dxo-search-panel 
+        [visible]="true" 
+        [highlightSearchText]="true" 
+        [width]="240" 
+        [placeholder]="'Search...'">
+      </dxo-search-panel>
+      <dxo-export 
+        [enabled]="true" 
+        fileName="EventDataGrid" 
+        [allowExportSelectedData]="true">
+      </dxo-export>
+      <dxo-editing [allowUpdating]="true" [allowDeleting]="true" mode="row">
+        <!-- 'batch' | 'cell' | 'form' | 'popup' -->
+      </dxo-editing>
+    
+      <dxo-filter-row [visible]="true"></dxo-filter-row>
+      <dxo-group-panel [visible]="true"></dxo-group-panel>
+    
+      <dxi-column dataField="title" caption="Title" [allowSorting]="true"></dxi-column>
+      <dxi-column dataField="description" caption="Description" [allowSorting]="true"></dxi-column>
+      <dxi-column dataField="LocalDateTime" caption="dateTime" [allowSorting]="true"></dxi-column>
+      <dxi-column dataField="location" caption="Location" [allowSorting]="true"></dxi-column>
+      <dxi-column dataField="organizer" caption="Organizer" [allowSorting]="true"></dxi-column>
+      <dxi-column dataField="capacity" caption="Capacity" [allowSorting]="true"></dxi-column>
+      <dxi-column dataField="isOnline" caption="Online Event" [allowSorting]="true"></dxi-column>
+  
+    </dx-data-grid>
+  
+    <dx-toast 
+      [visible]="toastVisible" 
+      [message]="toastMessage" 
+      [type]="'success'" 
+      (onHidden)="toastVisible = false">
+    </dx-toast>
+  
+    <app-add-edit-event
+      *ngIf="editAddPopupVisible"
+      [editAddPopupVisible]="editAddPopupVisible"
+      [eventToEdit]="selectedEvent"
+      (eventAdded)="onEventAdded($event)"
+      (eventEdited)="onEventEdited($event)"
+      (closePopup)="closePopup()">
+    </app-add-edit-event>
+  </div>
+  

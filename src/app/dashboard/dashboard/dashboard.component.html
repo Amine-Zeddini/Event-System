@@ -1,0 +1,28 @@
+<div class="d-flex">
+  <app-sidebar class="sidebar"></app-sidebar>
+
+  <div class="container mt-4 flex-grow-1">
+    <div class="row">
+      <div class="col-md-5 mb-4" (click)="redirectTo('/listEvent')">
+        <div class="dashboard-card bg-info text-white shadow">
+          <div class="card-content">
+            <i class="fas fa-calendar-alt fa-4x icon-style"></i>
+            <h4>Event</h4>
+            <p class="display-4">{{ numberOfStudents | async }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-5 mb-4" (click)="redirectTo('/listParticipant')">
+        <div class="dashboard-card bg-warning text-dark shadow">
+          <div class="card-content">
+            <i class="fas fa-users fa-4x icon-style"></i>
+            <h4>Participant</h4>
+            <p class="display-4">{{ numberOfTeachers | async }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

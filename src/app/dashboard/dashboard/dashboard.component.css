@@ -1,0 +1,54 @@
+/* Style des cartes */
+.dashboard-card {
+  border-radius: 12px;
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Alignement et taille pour les icônes */
+.icon-style {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+/* Titres avec plus de visibilité */
+.card-content h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Valeur au milieu de la carte */
+.card-content p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Responsive design pour s'adapter aux petits écrans */
+@media (max-width: 768px) {
+  .dashboard-card {
+    height: auto;
+    padding: 15px;
+  }
+
+  .icon-style {
+    font-size: 3rem;
+  }
+
+  .card-content p {
+    font-size: 28px;
+  }
+}

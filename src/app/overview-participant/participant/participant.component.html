@@ -1,0 +1,27 @@
+<div class="add-participant">
+  <button (click)="openAddPopup()">Add Participant</button>
+</div>
+
+<dx-data-grid [dataSource]="participants" [keyExpr]="'id'">
+  <dxo-search-panel 
+        [visible]="true" 
+        [highlightSearchText]="true" 
+        [width]="240" 
+        [placeholder]="'Search...'">
+      </dxo-search-panel>
+      
+  <dxo-editing [allowUpdating]="true" [allowDeleting]="true" mode="row">
+    <!-- 'batch' | 'cell' | 'form' | 'popup' -->
+  </dxo-editing>
+  ></dx-data-grid
+>
+
+<!-- Popup Component -->
+<app-add-edit-participant
+  *ngIf="editAddPopupVisible"
+  [editAddPopupVisible]="editAddPopupVisible"
+  [ParticipantData]="selectedParticipant"
+  (participantAdded)="onParticipantAdded($event)"
+  (participantEdited)="onParticipantEdited($event)"
+  (closePopup)="closePopup()"
+></app-add-edit-participant>

@@ -1,0 +1,202 @@
+{
+  "avis": [
+    {
+      "id": "1",
+      "titre": "Séminaire sur la Science des Données",
+      "description": "Découvrez les dernières tendances en Science des Données et IA.",
+      "date": "2024-12-16T10:00:00Z"
+    },
+    {
+      "id": "3",
+      "titre": "Formation en Marketing Digital",
+      "description": "Suivez une formation complète en marketing digital, SEO, et publicité en ligne.",
+      "date": "2024-12-20T18:00:00Z"
+    },
+    {
+      "id": "4",
+      "titre": "Conférence sur l'Intelligence Artificielle",
+      "description": "Rejoignez des experts pour discuter des avancées de l'IA et son impact sur diverses industries.",
+      "date": "2024-12-22T09:00:00Z"
+    },
+    {
+      "id": "5",
+      "titre": "Exposition d'Art Numérique",
+      "description": "Une exposition sur l'art numérique, réunissant des artistes locaux et internationaux.",
+      "date": "2024-12-24T15:00:00Z"
+    },
+    {
+      "id": "6",
+      "titre": "Webinaire sur la Blockchain",
+      "description": "Un webinaire sur les bases de la blockchain et son utilisation dans le secteur financier.",
+      "date": "2024-12-25T11:00:00Z"
+    },
+    {
+      "id": "7",
+      "titre": "Séminaire sur la Gestion de Projet",
+      "description": "Apprenez les meilleures pratiques de gestion de projet avec des experts en Agile et Scrum.",
+      "date": "2024-12-27T10:00:00Z"
+    },
+    {
+      "id": "8",
+      "titre": "Atelier de Design UX/UI",
+      "description": "Formation sur les principes de conception UX/UI pour des applications et sites web efficaces.",
+      "date": "2024-12-28T14:00:00Z"
+    },
+    {
+      "id": "9",
+      "titre": "Conférence sur l'Éducation Numérique",
+      "description": "Discussions sur l'avenir de l'éducation avec les technologies modernes.",
+      "date": "2024-12-29T09:00:00Z"
+    },
+    {
+      "id": "10",
+      "titre": "Forum sur les Startups Innovantes",
+      "description": "Un forum sur les startups technologiques et l'innovation dans les entreprises.",
+      "date": "2024-12-30T10:00:00Z"
+    },
+    {
+      "id": "11",
+      "titre": "Séminaire sur les Nouvelles Technologies",
+      "description": "Découvrez les dernières innovations technologiques et leur impact sur la société.",
+      "date": "2025-01-02T10:00:00Z"
+    },
+    {
+      "id": "12",
+      "titre": "Atelier de Programmation Python",
+      "description": "Un atelier pour apprendre à coder en Python et développer des applications.",
+      "date": "2025-01-05T14:00:00Z"
+    },
+    {
+      "id": "13",
+      "titre": "Webinaire sur la Cybersécurité",
+      "description": "Un webinaire sur les menaces et solutions en cybersécurité pour les entreprises.",
+      "date": "2025-01-08T11:00:00Z"
+    },
+    {
+      "id": "14",
+      "titre": "Séminaire sur la Blockchain Avancée",
+      "description": "Plongez dans les applications avancées de la blockchain et ses cas d'utilisation.",
+      "date": "2025-01-10T10:00:00Z"
+    },
+    {
+      "id": "15",
+      "titre": "Conférence sur l'Innovation en Entreprise",
+      "description": "Discutez des stratégies d'innovation pour réussir dans le monde des affaires.",
+      "date": "2025-01-12T09:00:00Z"
+    },
+    {
+      "id": "16",
+      "titre": "Atelier sur l'Intelligence Artificielle",
+      "description": "Apprenez à développer des modèles d'IA et leur application dans différents domaines.",
+      "date": "2025-01-14T15:00:00Z"
+    },
+    {
+      "id": "17",
+      "titre": "Séminaire sur la Gestion des Ressources Humaines",
+      "description": "Découvrez les meilleures pratiques pour la gestion des talents et des équipes.",
+      "date": "2025-01-16T10:00:00Z"
+    },
+    {
+      "id": "18",
+      "titre": "Webinaire sur le Marketing de Contenu",
+      "description": "Un webinaire sur la création de contenu efficace pour le marketing digital.",
+      "date": "2025-01-18T11:00:00Z"
+    },
+    {
+      "id": "19",
+      "titre": "Formation en Développement Mobile",
+      "description": "Apprenez à créer des applications mobiles natives pour Android et iOS.",
+      "date": "2025-01-20T14:00:00Z"
+    },
+    {
+      "id": "20",
+      "titre": "Forum sur l'Entrepreneuriat Social",
+      "description": "Participez à un forum sur l'impact des entreprises sociales et leur modèle économique.",
+      "date": "2025-01-22T10:00:00Z"
+    },
+    {
+      "id": "21",
+      "titre": "Séminaire sur la Conception de Produits Numériques",
+      "description": "Apprenez les méthodologies pour concevoir des produits numériques performants.",
+      "date": "2025-01-24T09:00:00Z"
+    },
+    {
+      "id": "22",
+      "titre": "Conférence sur l'Avenir de l'Internet",
+      "description": "Discussions sur les technologies qui transformeront l'avenir d'Internet.",
+      "date": "2025-01-26T11:00:00Z"
+    },
+    {
+      "id": "23",
+      "titre": "Atelier sur la Programmation JavaScript",
+      "description": "Un atelier pour apprendre à coder avec JavaScript et créer des applications interactives.",
+      "date": "2025-01-28T14:00:00Z"
+    },
+    {
+      "id": "24",
+      "titre": "Webinaire sur les Stratégies de Growth Hacking",
+      "description": "Un webinaire pour apprendre les techniques avancées de growth hacking.",
+      "date": "2025-01-30T10:00:00Z"
+    },
+    {
+      "id": "25",
+      "titre": "Séminaire sur la Blockchain dans la Finance",
+      "description": "Découvrez comment la blockchain transforme le secteur financier et bancaire.",
+      "date": "2025-02-02T10:00:00Z"
+    },
+    {
+      "id": "26",
+      "titre": "Conférence sur la Santé Numérique",
+      "description": "Explorez comment la technologie transforme le secteur de la santé et améliore les soins.",
+      "date": "2025-02-05T09:00:00Z"
+    },
+    {
+      "id": "27",
+      "titre": "Atelier sur les Bases de la Data Science",
+      "description": "Apprenez les concepts fondamentaux de la Data Science et des algorithmes.",
+      "date": "2025-02-07T14:00:00Z"
+    },
+    {
+      "id": "28",
+      "titre": "Séminaire sur les Technologies Immersives",
+      "description": "Découvrez les dernières innovations dans les technologies immersives telles que la VR et la AR.",
+      "date": "2025-02-10T10:00:00Z"
+    },
+    {
+      "id": "29",
+      "titre": "Webinaire sur le Cloud Computing",
+      "description": "Apprenez à utiliser les services de cloud computing pour les entreprises modernes.",
+      "date": "2025-02-12T11:00:00Z"
+    },
+    {
+      "id": "30",
+      "titre": "Formation sur la Sécurité des Applications Web",
+      "description": "Découvrez les meilleures pratiques pour sécuriser les applications web contre les menaces.",
+      "date": "2025-02-15T14:00:00Z"
+    },
+    {
+      "id": "31",
+      "titre": "Atelier de Réseautage Professionnel",
+      "description": "Un atelier pour développer vos compétences en réseautage et en gestion des relations professionnelles.",
+      "date": "2025-02-17T10:00:00Z"
+    },
+    {
+      "id": "32",
+      "titre": "Séminaire sur l'Innovation Durable",
+      "description": "Découvrez comment l'innovation durable peut transformer les industries et aider à lutter contre le changement climatique.",
+      "date": "2025-02-20T09:00:00Z"
+    },
+    {
+      "id": "33",
+      "titre": "Conférence sur le Futur du Travail",
+      "description": "Explorez les nouvelles tendances du travail, du télétravail aux nouvelles technologies.",
+      "date": "2025-02-22T11:00:00Z"
+    },
+    {
+      "id": "9bbc",
+      "titre": "Atelier de Développement Web",
+      "description": "aaaa",
+      "date": "2024-12-12"
+    }
+  ]
+}

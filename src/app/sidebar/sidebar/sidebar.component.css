@@ -1,0 +1,130 @@
+/* Style général de la sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2d3e50; /* Couleur de fond de la sidebar */
+  color: white;
+  padding-top: 20px;
+  box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.sidebar .brand {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .brand img {
+  width: 80%; /* Redimensionner l'image */
+  border-radius: 8px;
+}
+
+.sidebar .nav {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #3b4c61; /* Couleur au survol */
+  color: #fff;
+  transform: translateX(10px); /* Animation de déplacement */
+}
+
+.sidebar .nav-link .mat-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover .mat-icon {
+  color: #ffcc00; /* Changer la couleur de l'icône au survol */
+}
+
+.sidebar .text {
+  font-weight: 500;
+  display: inline-block;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar:hover + .content {
+  margin-left: 250px; /* Ajuste la taille de la zone de contenu lorsque la sidebar est visible */
+}
+
+/* Pour les petits écrans (responsive design) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar .nav-link {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .sidebar .mat-icon {
+    font-size: 18px;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+
+  .sidebar.active {
+    width: 250px; /* Affiche la sidebar sur mobile au clic */
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+/* Sidebar link styles */
+.sidebar-links li a {
+  color: #333; /* default link color */
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.active {
+  color: #fff; /* Active link color */
+  background-color: #1e88e5; /* Active background color */
+}
+
+.inactive {
+  color: #aaa; /* Inactive link color */
+  background-color: transparent; /* No background color for inactive links */
+}

@@ -1,0 +1,83 @@
+<div class="sidebar">
+  <div class="brand">
+    <img src="./assets/images/school.avif" alt="Logo" />
+  </div>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a
+        routerLink="/acceuil"
+        class="nav-link custom-link link"
+        routerLink="/acceuil"
+        [ngClass]="{
+          active: isActive('/acceuil'),
+          inactive: !isActive('/acceuil')
+        }"
+        routerLinkActive="active"
+        routerLinkActiveOptions="{ exact: true }"
+      >
+        <mat-icon>home</mat-icon>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        routerLink="/listAvis"
+        class="nav-link custom-link link"
+        [ngClass]="{
+          active: isActive('/listAvis'),
+          inactive: !isActive('/listAvis')
+        }"
+        routerLinkActive="active"
+        routerLinkActiveOptions="{ exact: true }"
+      >
+        <mat-icon>description</mat-icon>
+        <span class="text">Avis</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link custom-link link"
+        routerLink="/listParticipant"
+        [ngClass]="{
+          active: isActive('/listParticipant'),
+          inactive: !isActive('/listParticipant')
+        }"
+        routerLinkActive="active"
+        routerLinkActiveOptions="{ exact: true }"
+      >
+        <mat-icon>school</mat-icon>
+        <span class="text">Participant</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a
+        routerLink="/listEvent"
+        class="nav-link custom-link link"
+        routerLink="/listEvent"
+        [ngClass]="{
+          active: isActive('/listEvent'),
+          inactive: !isActive('/listEvent')
+        }"
+        routerLinkActive="active"
+        routerLinkActiveOptions="{ exact: true }"
+      >
+        <mat-icon class="align-middle">group</mat-icon>
+        <span class="text ml-1 align-middle">Event</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link custom-link link" routerLink="/login">
+        <mat-icon class="align-middle">logout</mat-icon>
+        <span class="text ml-1 align-middle" (click)="logout()"
+          >Déconnexion</span
+        >
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="content"></div>

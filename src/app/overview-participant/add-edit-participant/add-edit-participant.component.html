@@ -1,0 +1,119 @@
+<dx-popup
+  [(visible)]="editAddPopupVisible"
+  title="{{ isEditMode ? 'Edit Participant' : 'Add Participant' }}"
+  [width]="600"
+  [height]="500"
+  [showTitle]="true"
+  [dragEnabled]="true"
+  (onHiding)="close()"
+>
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+  </div>
+
+  <dx-form
+    [(formData)]="newParticipant"
+    [validationGroup]="'participantForm'"
+    [showColonAfterLabel]="true"
+    [labelLocation]="'top'"
+    [colCount]="2"
+  >
+    <dxi-item
+      dataField="id"
+      editorType="dxTextBox"
+      [visible]="false"
+    ></dxi-item>
+    <dxi-item dataField="nom">
+      <dx-text-box [(value)]="newParticipant.nom">
+        <dx-validator>
+          <dxi-validation-rule
+            type="required"
+            message="Nom is required"
+          ></dxi-validation-rule>
+        </dx-validator>
+      </dx-text-box>
+    </dxi-item>
+
+    <dxi-item dataField="prenom">
+      <dx-text-box [(value)]="newParticipant.prenom">
+        <dx-validator>
+          <dxi-validation-rule
+            type="required"
+            message="Prenom is required"
+          ></dxi-validation-rule>
+        </dx-validator>
+      </dx-text-box>
+    </dxi-item>
+
+    <dxi-item dataField="email">
+      <dx-text-box [(value)]="newParticipant.email">
+        <dx-validator>
+          <dxi-validation-rule
+            type="required"
+            message="Email is required"
+          ></dxi-validation-rule>
+          <dxi-validation-rule
+            type="email"
+            message="Please enter a valid email"
+          ></dxi-validation-rule>
+        </dx-validator>
+      </dx-text-box>
+    </dxi-item>
+
+    <dxi-item dataField="telephone">
+      <dx-text-box [(value)]="newParticipant.telephone">
+        <dx-validator>
+          <dxi-validation-rule
+            type="required"
+            message="Telephone is required"
+          ></dxi-validation-rule>
+        </dx-validator>
+      </dx-text-box>
+    </dxi-item>
+
+    <dxi-item dataField="dateNaissance" editorType="dxDateBox"></dxi-item>
+
+    <dxi-item dataField="adresse"></dxi-item>
+
+    <dxi-item dataField="genre">
+      <dx-radio-group
+        [items]="['Homme', 'Femme']"
+        [(value)]="newParticipant.genre"
+      ></dx-radio-group>
+    </dxi-item>
+    <dxi-item dataField="statut">
+      <dx-radio-group
+        [items]="['Actif', 'Inactif']"
+        [(value)]="newParticipant.statut"
+      ></dx-radio-group>
+    </dxi-item>
+
+    <dxi-item dataField="role"></dxi-item>
+
+    <dxi-item dataField="evenements">
+      <dx-tag-box
+        [items]="availableEvenements"
+        [(value)]="newParticipant.evenements"
+        [showSelectionControls]="true"
+        [hideSelectedItems]="false"
+        [searchEnabled]="true"
+      >
+      </dx-tag-box>
+    </dxi-item>
+  </dx-form>
+
+  <div class="popup-actions">
+    <dx-button
+      text="Cancel"
+      (onClick)="close()"
+      [width]="120"
+      style="margin-right: 10px"
+    ></dx-button>
+    <dx-button
+      text="Save"
+      (onClick)="submitForm($event)"
+      [width]="120"
+      [type]="'success'"
+    ></dx-button>
+  </div>
+</dx-popup>
