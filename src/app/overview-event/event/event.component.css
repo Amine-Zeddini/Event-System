@@ -1,126 +1,26 @@
-/* Variables CSS */
-:root {
-    --primary-color: #29933e;
-    --primary-hover-color: #237a2e; /* Calculé manuellement pour simuler 'darken' */
-    --secondary-color: #6c757d;
-    --secondary-hover-color: #5a6369; /* Calculé manuellement pour simuler 'darken' */
-    --white-color: #fff;
-  }
-  
-  /* General Container Styling */
-  .scroll-container {
-    max-height: 80vh;
-    overflow: auto;
-    padding: 20px;
-    background-color: #f9f9f9; /* Light background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
-  
-  /* Data Grid Styling */
-  .data-grid {
-    margin: 20px 0;
-    background-color: var(--white-color);
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    min-width: 100%;
-  }
-  
-  /* Header Row */
-  .data-grid .dx-header-row {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    font-weight: bold;
-    text-align: left;
-  }
-  
-  /* Row Styling */
-  .data-grid .dx-data-row {
-    transition: background-color 0.3s ease;
-  }
-  
-  .data-grid .dx-data-row:hover {
-    background-color: #f5f5f5; /* Highlight on hover */
-  }
-  
-  /* Search Panel Styling */
-  .dxo-search-panel {
-    margin: 8px;
-  }
-  
-  .dxo-search-panel input {
-    border-radius: 5px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    width: 100%;
-    max-width: 240px;
-  }
-  
-  /* Group Panel Styling */
-  .dxo-group-panel {
-    background-color: #e3f2fd; /* Light blue */
-    border: 1px dashed var(--secondary-color);
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  /* Export Button Styling */
-  .dxo-export button {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dxo-export button:hover {
-    background-color: var(--primary-hover-color);
-  }
-  
-  /* Toast Styling */
-  .dx-toast {
-    font-size: 16px;
-    font-weight: 500;
-    background-color: #4caf50; /* Success color */
-    color: var(--white-color);
-    border-radius: 4px;
-    padding: 8px 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
-  
-  /* Add/Edit Popup */
-  app-add-edit-event {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--white-color);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    padding: 24px;
-    z-index: 1000;
-    max-width: 600px;
-    width: 90%;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .scroll-container {
-      padding: 10px;
-    }
-  
-    .data-grid {
-      font-size: 12px;
-    }
-  
-    app-add-edit-event {
-      padding: 16px;
-      width: 90%;
-    }
-  }
+.container {
+  background-color: #f7f7f7; /* Fond clair */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.data-grid {
+  background-color: #ffffff; /* Fond blanc pour la grille */
+}
+
+.add-participant button {
+  background-color: #007bff; /* Bleu pour le bouton */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.add-participant button:hover {
+  background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+h1.text-black {
+  color: #343a40; /* Noir plus foncé pour le titre */
+}

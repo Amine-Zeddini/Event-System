@@ -1,25 +1,28 @@
 <div class="d-flex">
+  <!-- Sidebar -->
   <app-sidebar class="sidebar"></app-sidebar>
 
+  <!-- Contenu principal -->
   <div class="container mt-4 flex-grow-1">
     <div class="row">
+      <!-- Card pour l'événement -->
       <div class="col-md-5 mb-4" (click)="redirectTo('/listEvent')">
-        <div class="dashboard-card bg-info text-white shadow">
+        <div class="dashboard-card bg-primary text-white shadow">
           <div class="card-content">
             <i class="fas fa-calendar-alt fa-4x icon-style"></i>
             <h4>Event</h4>
-            <p class="display-4">{{ numberOfStudents | async }}</p>
+            <p class="display-4">{{ numberOfEvents }}</p> <!-- Affiche le nombre d'événements -->
           </div>
         </div>
       </div>
 
-
+      <!-- Card pour le participant -->
       <div class="col-md-5 mb-4" (click)="redirectTo('/listParticipant')">
-        <div class="dashboard-card bg-warning text-dark shadow">
+        <div class="dashboard-card bg-info text-white shadow">
           <div class="card-content">
             <i class="fas fa-users fa-4x icon-style"></i>
             <h4>Participant</h4>
-            <p class="display-4">{{ numberOfTeachers | async }}</p>
+            <p class="display-4">{{ numberOfParticipants }}</p> <!-- Affiche le nombre de participants -->
           </div>
         </div>
       </div>

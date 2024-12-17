@@ -1,27 +1,36 @@
-<div class="add-participant">
-  <button (click)="openAddPopup()">Add Participant</button>
-</div>
+<div class="container mt-4 align-right">
+  <!-- Titre de la liste des participants -->
+  <h1 class="text-black">Liste des Participants</h1>
 
-<dx-data-grid [dataSource]="participants" [keyExpr]="'id'">
-  <dxo-search-panel 
-        [visible]="true" 
-        [highlightSearchText]="true" 
-        [width]="240" 
-        [placeholder]="'Search...'">
+  <div class="add-participant mb-4">
+    <button (click)="openAddPopup()" class="btn btn-primary">
+      Add Participant
+    </button>
+  </div>
+
+  <!-- DataGrid pour afficher la liste des participants -->
+  <div class="scroll-container">
+    <dx-data-grid [dataSource]="participants" [keyExpr]="'id'">
+      <dxo-search-panel 
+            [visible]="true" 
+            [highlightSearchText]="true" 
+            [width]="240" 
+            [placeholder]="'Search...'">
       </dxo-search-panel>
       
-  <dxo-editing [allowUpdating]="true" [allowDeleting]="true" mode="row">
-    <!-- 'batch' | 'cell' | 'form' | 'popup' -->
-  </dxo-editing>
-  ></dx-data-grid
->
+      <dxo-editing [allowUpdating]="true" [allowDeleting]="true" mode="row">
+        <!-- 'batch' | 'cell' | 'form' | 'popup' -->
+      </dxo-editing>
+    </dx-data-grid>
+  </div>
 
-<!-- Popup Component -->
-<app-add-edit-participant
-  *ngIf="editAddPopupVisible"
-  [editAddPopupVisible]="editAddPopupVisible"
-  [ParticipantData]="selectedParticipant"
-  (participantAdded)="onParticipantAdded($event)"
-  (participantEdited)="onParticipantEdited($event)"
-  (closePopup)="closePopup()"
-></app-add-edit-participant>
+  <!-- Popup Component -->
+  <app-add-edit-participant
+    *ngIf="editAddPopupVisible"
+    [editAddPopupVisible]="editAddPopupVisible"
+    [ParticipantData]="selectedParticipant"
+    (participantAdded)="onParticipantAdded($event)"
+    (participantEdited)="onParticipantEdited($event)"
+    (closePopup)="closePopup()">
+  </app-add-edit-participant>
+</div>

@@ -1,54 +1,45 @@
-/* Style des cartes */
+/* Style pour les cartes du tableau de bord */
 .dashboard-card {
-  border-radius: 12px;
-  padding: 20px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dashboard-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Alignement et taille pour les icônes */
+/* Couleur de fond pour la carte d'événement */
+.bg-primary {
+  background-color: #007bff !important; /* Bleu pour l'événement */
+}
+
+/* Couleur de fond pour la carte de participant */
+.bg-info {
+  background-color: #17a2b8 !important; /* Bleu clair pour le participant */
+}
+
+/* Couleur du texte des cartes */
+.text-white {
+  color: white !important;
+}
+
+.text-dark {
+  color: #343a40 !important; /* Gris foncé pour le texte */
+}
+
+/* Icône et contenu de la carte */
+.card-content {
+  text-align: center;
+  padding: 20px;
+}
+
 .icon-style {
-  font-size: 4rem;
-  margin-bottom: 10px;
+  color: white; /* Couleur des icônes */
 }
 
-/* Titres avec plus de visibilité */
-.card-content h4 {
-  font-size: 20px;
+.display-4 {
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 8px;
-}
-
-/* Valeur au milieu de la carte */
-.card-content p {
-  font-size: 36px;
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Responsive design pour s'adapter aux petits écrans */
-@media (max-width: 768px) {
-  .dashboard-card {
-    height: auto;
-    padding: 15px;
-  }
-
-  .icon-style {
-    font-size: 3rem;
-  }
-
-  .card-content p {
-    font-size: 28px;
-  }
 }

@@ -6,7 +6,7 @@ import {
   OnInit,
   Output,
   SimpleChanges,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
 import { ParticipantsService } from '../participant.service';
 import { Participant } from 'src/app/model/participant';

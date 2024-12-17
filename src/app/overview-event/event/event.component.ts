@@ -76,9 +76,10 @@ export class EventComponent implements OnInit {
 
   onExporting(event: any): void {
     event.component.beginUpdate();
-    event.component.option('export.fileName', 'EventDataGrid_Customized');
+    event.component.option('export.fileName', 'EventDataGrid_Customized'); // Définir le nom du fichier exporté
     event.component.endUpdate();
   }
+  
 
   onGridOptionChanged(event: any): void {
     if (event.fullName === 'paging.pageSize') {

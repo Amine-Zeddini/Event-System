@@ -197,6 +197,18 @@
       "titre": "Atelier de Développement Web",
       "description": "aaaa",
       "date": "2024-12-12"
+    },
+    {
+      "id": "d42f",
+      "titre": "Conférence sur l'Intelligence Artificielle",
+      "description": "amino",
+      "date": "2024-12-07"
+    },
+    {
+      "id": "ee3b",
+      "titre": "Séminaire sur les Nouvelles Technologies",
+      "description": "gfg",
+      "date": "2024-12-05"
     }
   ]
 }

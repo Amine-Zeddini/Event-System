@@ -8,7 +8,7 @@ import { ListEventComponent } from './list-event/list-event.component';
 import { AddEditEventComponent } from './add-edit-event/add-edit-event.component';
 import { EventComponent } from './event/event.component';
 import { SidebarModule } from "../sidebar/sidebar/sidebar.module";
-import { DxButtonModule, DxDataGridModule, DxFormModule, DxPopupModule, DxRadioGroupModule, DxToastModule, DxValidatorModule } from 'devextreme-angular';
+import { DevExtremeModule, DxButtonModule, DxDataGridModule, DxFormModule, DxPopupModule, DxRadioGroupModule, DxToastModule, DxValidatorModule } from 'devextreme-angular';
 import { DxiItemModule } from 'devextreme-angular/ui/nested';
 
 const routes: Routes=[
@@ -37,8 +37,9 @@ const routes: Routes=[
     DxPopupModule,
     DxFormModule,
     NgIf,
-    DxValidatorModule
-    
+    DxValidatorModule,
+    DxDataGridModule,
+    DevExtremeModule    
 ],
   exports:[EventComponent]
 })

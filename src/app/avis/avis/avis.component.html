@@ -1,41 +1,36 @@
 <div class="container mt-4 align-right">
-    <h1 class="text-black">Liste des Avis</h1>
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-md-12 d-flex justify-content-end mb-4">
-          <a routerLink="/ajouterAvis" type="button" class="btn btn-outline-primary">
-            <mat-icon class="align-middle">add</mat-icon>
-            <span class="text ml-1 align-middle">Ajouter Avis</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="row">
-        <div *ngFor="let avis of listAvis" class="col-md-4 mb-4">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <h5 class="card-title">{{ avis.titre }}</h5>
-              <p class="card-text">{{ avis.description }}</p>
-              <p class="card-text"><small class="text-muted">Date: {{ avis.date | date: 'medium' }}</small></p>
-            </div>
-            <div class="card-footer d-flex flex-column align-items-center">
-              <a routerLink="/avis/{{ avis.id }}/modifierAvis" class="btn btn-outline-primary custom-button custom-modifier-button btn-block mb-2">
-                <mat-icon class="align-middle">edit</mat-icon>
-                <span class="text ml-1 align-middle">Modifier</span>
-              </a>
-              <button type="button" class="btn btn-outline-danger custom-button custom-supprimer-button btn-block" (click)="supprimer(avis.id)">
-                <mat-icon class="align-middle">delete</mat-icon>
-                <span class="text ml-1 align-middle">Supprimer</span>
-              </button>
-            </div>
+  <!-- Centrer le titre de la liste des avis -->
+  <h1 class="text-center text-black">Liste des Avis</h1>
+
+  <div class="add-participant mb-4">
+    <a routerLink="/ajouterAvis" type="button" class="btn btn-primary">
+      <mat-icon class="align-middle">add</mat-icon>
+      <span class="text ml-1 align-middle">Ajouter Avis</span>
+    </a>
+  </div>
+
+  <!-- Liste des Avis avec fond personnalisé -->
+  <div class="scroll-container">
+    <div class="row">
+      <div *ngFor="let avis of listAvis" class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ avis.titre }}</h5>
+            <p class="card-text">{{ avis.description }}</p>
+            <p class="card-text"><small class="text-muted">Date: {{ avis.date | date: 'medium' }}</small></p>
+          </div>
+          <div class="card-footer d-flex flex-column align-items-center">
+            <a routerLink="/avis/{{ avis.id }}/modifierAvis" class="btn btn-outline-primary custom-button custom-modifier-button btn-block mb-2">
+              <mat-icon class="align-middle">edit</mat-icon>
+              <span class="text ml-1 align-middle">Modifier</span>
+            </a>
+            <button type="button" class="btn btn-outline-danger custom-button custom-supprimer-button btn-block" (click)="supprimer(avis.id)">
+              <mat-icon class="align-middle">delete</mat-icon>
+              <span class="text ml-1 align-middle">Supprimer</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  
-<!-- <app-ajouter-avis></app-ajouter-avis>
-<app-modifier-avis></app-modifier-avis> -->
-    
-    
+</div>

@@ -1,49 +1,66 @@
-/* styles.css (ou styles.scss) */
-.sidebar {
-  width: 250px;
-  height: 100%;
-  background-color: #f8f9fa;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 20px;
-  z-index: 20;
-}
-
-.brand {
-  font-size: 1.5em;
+/* Titre de la liste des avis */
+h1.text-black {
+  color: #333; /* Couleur de texte foncé pour le titre */
+  font-size: 2rem;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 20px;
 }
 
-
-.nav {
-  list-style-type: none;
-  padding: 0;
+/* Fond de la liste des avis (DataGrid) */
+.scroll-container {
+  background-color: #f0f8ff; /* Bleu clair pour le fond */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.nav-item {
-  margin-bottom: 10px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #000;
-  display: block;
-  padding: 5px;
+/* Bouton "Ajouter Avis" */
+.add-participant a {
+  background-color: #007bff; /* Bleu vibrant */
+  color: white;
+  border: none;
+  padding: 10px 20px;
   border-radius: 5px;
-  transition: background-color 0.3s;
-  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.nav-link:hover {
-  background-color: #d3d3d3;
+.add-participant a:hover {
+  background-color: #0056b3; /* Bleu foncé au survol */
 }
 
-.content {
-  margin-left: 250px;
-  padding: 16px;
-  position: relative;
-  z-index: 1;
+/* Style des boutons Modifier et Supprimer */
+.custom-button {
+  background-color: #ffffff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Bouton Supprimer (couleur rouge) */
+.custom-supprimer-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-supprimer-button:hover {
+  background-color: #ff1a1a;
+}
+
+/* Bouton Modifier (couleur bleue) */
+.custom-modifier-button {
+  background-color: #4d94ff;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-modifier-button:hover {
+  background-color: #0056b3;
 }

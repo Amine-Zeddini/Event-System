@@ -1,6 +1,6 @@
 export class Participant {
   constructor(
-    public id: number, // `id` devient optionnel
+    public id: number,
     public nom: string,
     public prenom: string,
     public email: string,

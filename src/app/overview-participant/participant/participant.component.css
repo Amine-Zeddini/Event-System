@@ -1,0 +1,130 @@
+/* Conteneur principal */
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f8ff; /* Bleu ciel doux */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour profondeur */
+}
+
+/* Titre */
+h1 {
+    color: #ff4500; /* Orange vif */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Bouton Ajouter Avis */
+.btn-outline-primary {
+    border: 2px solid #28a745; /* Vert éclatant */
+    color: #28a745;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Liste des avis - Fond */
+.row {
+    background: linear-gradient(120deg, #ffebcd, #ffe4e1); /* Dégradé clair (beige et rose) */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Carte */
+.card {
+    background-color: #ffffff; /* Blanc pour contraste */
+    border: 2px solid #ffb703; /* Jaune vif */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Effet de relief */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre de la carte */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4500; /* Orange vif */
+    margin-bottom: 10px;
+}
+
+/* Texte de la carte */
+.card-text {
+    font-size: 1rem;
+    color: #6c757d; /* Gris élégant */
+}
+
+/* Date */
+.card-text small {
+    font-size: 0.9rem;
+    color: #007bff; /* Bleu vif */
+}
+
+/* Pied de la carte */
+.card-footer {
+    background-color: #f8f9fa; /* Gris clair */
+    border-top: 1px solid #dee2e6;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+}
+
+/* Boutons */
+.custom-button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modifier */
+.custom-modifier-button {
+    border: 2px solid #007bff; /* Bleu vif */
+    color: #007bff;
+}
+
+.custom-modifier-button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Supprimer */
+.custom-supprimer-button {
+    border: 2px solid #dc3545; /* Rouge vif */
+    color: #dc3545;
+}
+
+.custom-supprimer-button:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Réactivité */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .btn-outline-primary {
+        font-size: 1rem;
+    }
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
