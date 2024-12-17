@@ -27,7 +27,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       const formData = this.loginForm.value;
       if (
-        formData.email === 'amine@amine.com' &&
+        formData.email === 'amine@chawki.com' &&
         formData.password === 'admin1234'
       ) {
         console.log('Login successful');

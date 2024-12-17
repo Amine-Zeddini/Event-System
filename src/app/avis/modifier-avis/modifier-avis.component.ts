@@ -34,10 +34,10 @@ export class ModifierAvisComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.avisId = +this.route.snapshot.paramMap.get('id')!; // Convertir l'ID en nombre
-    // this.avisService.getAvisById(this.avisId).subscribe((avis: Avis) => {
-    //   this.avisForm.patchValue(avis); // Patch les valeurs de l'avis récupéré dans le formulaire
-    // });
+    this.avisId = +this.route.snapshot.paramMap.get('id')!; // Convertir l'ID en nombre
+    this.avisService.getAvisById(this.avisId).subscribe((avis: Avis) => {
+      this.avisForm.patchValue(avis); // Patch les valeurs de l'avis récupéré dans le formulaire
+    });
   }
 
   onSubmit() {

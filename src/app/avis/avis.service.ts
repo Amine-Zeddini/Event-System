@@ -19,6 +19,10 @@ export class AvisService {
     return this.http.get<Avis[]>(this.apiUrl);
   }
 
+  getAvisById(id: number): Observable<Avis> {
+    return this.http.get<Avis>(`${this.apiUrl}/${id}`);
+  }
+
   // Ajouter un avis
   addAvis(avis: Avis): Observable<Avis> {
     return this.http.post<Avis>(this.apiUrl, avis);

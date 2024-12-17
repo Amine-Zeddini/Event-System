@@ -1,10 +1,10 @@
 {
   "avis": [
     {
-      "id": "1",
       "titre": "Séminaire sur la Science des Données",
       "description": "Découvrez les dernières tendances en Science des Données et IA.",
-      "date": "2024-12-16T10:00:00Z"
+      "date": "2024-12-28",
+      "id": "1"
     },
     {
       "id": "3",

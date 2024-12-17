@@ -1,10 +1,15 @@
+.container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f8ff; /* Bleu ciel doux */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour profondeur */
+}
 /* Titre de la liste des avis */
 h1.text-black {
-  color: #333; /* Couleur de texte foncé pour le titre */
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  color: #343a40; /* Couleur de texte foncé pour le titre */
 }
+
 
 /* Fond de la liste des avis (DataGrid) */
 .scroll-container {
@@ -15,7 +20,7 @@ h1.text-black {
 
 /* Bouton "Ajouter Avis" */
 .add-participant a {
-  background-color: #007bff; /* Bleu vibrant */
+  background-color: #28a745; /* Bleu vibrant */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -25,7 +30,7 @@ h1.text-black {
 }
 
 .add-participant a:hover {
-  background-color: #0056b3; /* Bleu foncé au survol */
+  background-color: #28a745; /* Bleu foncé au survol */
 }
 
 /* Style des boutons Modifier et Supprimer */
