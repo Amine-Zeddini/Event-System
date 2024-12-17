@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { EventsService } from '../event.service';
 import { Event } from 'src/app/model/event';
+import * as XLSX from 'xlsx'; // Importer la bibliothèque xlsx
 
 @Component({
   selector: 'app-event',
@@ -13,6 +14,8 @@ export class EventComponent implements OnInit {
   toastVisible: boolean = false;
   selectedEvent: Event | null = null;
   toastMessage: string = '';
+
+  @ViewChild('dataGrid') dataGrid: any; // Référence à la grille de données
 
   constructor(private eventsService: EventsService) {}
 
@@ -74,12 +77,20 @@ export class EventComponent implements OnInit {
     );
   }
 
-  onExporting(event: any): void {
-    event.component.beginUpdate();
-    event.component.option('export.fileName', 'EventDataGrid_Customized'); // Définir le nom du fichier exporté
-    event.component.endUpdate();
+  // Méthode pour exporter les données vers Excel
+  onExport(): void {
+    const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.events); // Convertir les événements en une feuille Excel
+    const wb: XLSX.WorkBook = XLSX.utils.book_new(); // Créer un nouveau livre de travail
+    XLSX.utils.book_append_sheet(wb, ws, 'Events'); // Ajouter la feuille au livre
+    XLSX.writeFile(wb, 'EventData.xlsx'); // Télécharger le fichier Excel
   }
-  
+
+  onExporting(event: any): void {
+    const grid = event.component;
+    grid.beginUpdate();
+    grid.option('export.fileName', 'EventDataGrid_Exported'); // Définir le nom du fichier exporté
+    grid.endUpdate();
+  }
 
   onGridOptionChanged(event: any): void {
     if (event.fullName === 'paging.pageSize') {

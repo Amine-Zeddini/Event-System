@@ -7,14 +7,20 @@
     <button class="btn btn-primary" (click)="openAddPopup()">Add Event</button>
   </div>
 
+  <!-- Bouton pour exporter en Excel -->
+  <div class="export-event mb-4">
+    <button class="btn btn-success" (click)="onExport()">Export to Excel</button>
+  </div>
+
   <!-- Liste des événements avec fond personnalisé -->
   <div class="scroll-container">
-    <dx-data-grid 
-      [dataSource]="events" 
-      [showBorders]="true" 
+    <dx-data-grid
+      #dataGrid
+      [dataSource]="events"
+      [showBorders]="true"
       class="data-grid"
       [allowColumnReordering]="true"
-      (onExporting)="onExporting($event)" 
+      (onExporting)="onExporting($event)"
       (onOptionChanged)="onGridOptionChanged($event)"
       [grouping]="{ autoExpandAll: true, contextMenuEnabled: true }"
       [paging]="{ enabled: true, pageSize: 5 }"
@@ -29,7 +35,7 @@
       [stateStoring]="{ enabled: true, type: 'localStorage', storageKey: 'gridState' }"
       [scrolling]="{ mode: 'virtual' }"
       [selection]="{ mode: 'multiple' }">
-
+      
       <!-- Panneau de recherche -->
       <dxo-search-panel 
         [visible]="true" 
@@ -62,7 +68,6 @@
       <dxi-column dataField="organizer" caption="Organizer" [allowSorting]="true"></dxi-column>
       <dxi-column dataField="capacity" caption="Capacity" [allowSorting]="true"></dxi-column>
       <dxi-column dataField="isOnline" caption="Online Event" [allowSorting]="true"></dxi-column>
-
     </dx-data-grid>
 
     <!-- Toast pour afficher les messages de succès -->
