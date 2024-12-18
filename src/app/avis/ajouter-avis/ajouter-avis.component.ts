@@ -72,7 +72,6 @@ export class AjouterAvisComponent implements OnInit {
         (addedAvis) => {
           console.log('Avis ajoutée avec succès :', addedAvis);
           this.avisForm.reset();
-          // Appeler emitAvisUpdate après l'ajout d'un avis
           this.avisService.emitAvisUpdate();
           this.router.navigate(['/listAvis']);
         },

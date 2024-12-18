@@ -9,14 +9,13 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 export class SidebarComponent {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
-  // Function to check if the current route is active
   isActive(route: string): boolean {
     console.log('isActive', route);
     return this.router.url === route;
   }
 
   logout() {
-    localStorage.removeItem('authToken'); // Clear the authentication token
-    this.router.navigate(['/login']); // Redirect to login page
+    localStorage.removeItem('authToken');
+    this.router.navigate(['/login']);
   }
 }

@@ -1,5 +1,4 @@
 <div class="container mt-4 align-right">
-  <!-- Titre de la liste des participants -->
 
   <h1 class="text-center text-black">Liste des Participants</h1>
 
@@ -9,7 +8,11 @@
     </button>
   </div>
 
-  <!-- DataGrid pour afficher la liste des participants -->
+   <div class="export-participant mb-4">
+    <button class="btn btn-success" (click)="onExport()">Export to Excel</button>
+  </div>
+
+
   <div class="scroll-container">
     <dx-data-grid [dataSource]="participants" [keyExpr]="'id'">
       <dxo-search-panel 
@@ -21,7 +24,8 @@
       
       <dxo-editing [allowUpdating]="true" [allowDeleting]="true" mode="row">
         <!-- 'batch' | 'cell' | 'form' | 'popup' -->
-      </dxo-editing>
+    </dxo-editing>
+    
     </dx-data-grid>
   </div>
 

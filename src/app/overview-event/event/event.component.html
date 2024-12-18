@@ -1,18 +1,14 @@
 <div class="container mt-4">
-  <!-- Titre centré avec couleur -->
   <h1 class="text-center text-black">Liste des Events</h1>
 
-  <!-- Bouton pour ajouter un événement avec style bleu -->
   <div class="add-event mb-4">
     <button class="btn btn-primary" (click)="openAddPopup()">Add Event</button>
   </div>
 
-  <!-- Bouton pour exporter en Excel -->
   <div class="export-event mb-4">
     <button class="btn btn-success" (click)="onExport()">Export to Excel</button>
   </div>
 
-  <!-- Liste des événements avec fond personnalisé -->
   <div class="scroll-container">
     <dx-data-grid
       #dataGrid
@@ -36,7 +32,6 @@
       [scrolling]="{ mode: 'virtual' }"
       [selection]="{ mode: 'multiple' }">
       
-      <!-- Panneau de recherche -->
       <dxo-search-panel 
         [visible]="true" 
         [highlightSearchText]="true" 
@@ -44,23 +39,19 @@
         [placeholder]="'Search...'">
       </dxo-search-panel>
 
-      <!-- Exportation des données -->
       <dxo-export 
         [enabled]="true" 
         fileName="EventDataGrid" 
         [allowExportSelectedData]="true">
       </dxo-export>
 
-      <!-- Mode d'édition pour les événements -->
       <dxo-editing [allowUpdating]="true" [allowDeleting]="true" mode="row">
         <!-- 'batch' | 'cell' | 'form' | 'popup' -->
       </dxo-editing>
 
-      <!-- Autres options de configuration -->
       <dxo-filter-row [visible]="true"></dxo-filter-row>
       <dxo-group-panel [visible]="true"></dxo-group-panel>
 
-      <!-- Colonnes de la grille -->
       <dxi-column dataField="title" caption="Title" [allowSorting]="true"></dxi-column>
       <dxi-column dataField="description" caption="Description" [allowSorting]="true"></dxi-column>
       <dxi-column dataField="LocalDateTime" caption="DateTime" [allowSorting]="true"></dxi-column>
@@ -70,7 +61,6 @@
       <dxi-column dataField="isOnline" caption="Online Event" [allowSorting]="true"></dxi-column>
     </dx-data-grid>
 
-    <!-- Toast pour afficher les messages de succès -->
     <dx-toast 
       [visible]="toastVisible" 
       [message]="toastMessage" 
@@ -78,7 +68,6 @@
       (onHidden)="toastVisible = false">
     </dx-toast>
 
-    <!-- Popup pour ajouter/éditer un événement -->
     <app-add-edit-event
       *ngIf="editAddPopupVisible"
       [editAddPopupVisible]="editAddPopupVisible"

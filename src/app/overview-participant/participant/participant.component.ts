@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Participant } from 'src/app/model/participant';
 import { ParticipantsService } from '../participant.service';
+import * as XLSX from 'xlsx'; // Importer la bibliothèque xlsx
 
 @Component({
   selector: 'app-participant',
@@ -84,6 +85,15 @@ export class ParticipantComponent implements OnInit {
       }
     );
   }
+
+    onExport(): void {
+      const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.participants); // Convertir les événements en une feuille Excel
+      const wb: XLSX.WorkBook = XLSX.utils.book_new(); // Créer un nouveau livre de travail
+      XLSX.utils.book_append_sheet(wb, ws, 'participants'); // Ajouter la feuille au livre
+      XLSX.writeFile(wb, 'ParticipantData.xlsx');
+    }
+  
+  
 
   onGridOptionChanged(event: any): void {
     console.log('Grid options changed:', event);

@@ -9,9 +9,9 @@ import { SharedService } from './shared/shared.service';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './Authentification/login/login.component';
-import { SidebarModule } from './sidebar/sidebar/sidebar.module'; // Importation du module Sidebar
-import { ParticipantModule } from './overview-participant/participant.module'; // Importation du module Participant
-import { EventModule } from './overview-event/event.module'; // Importation du module Event
+import { SidebarModule } from './sidebar/sidebar/sidebar.module';
+import { ParticipantModule } from './overview-participant/participant.module'; 
+import { EventModule } from './overview-event/event.module';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
@@ -25,9 +25,9 @@ import { EventModule } from './overview-event/event.module'; // Importation du m
     DashboardModule,
     MatIconModule,
     FormsModule,
-    SidebarModule, // Importation du module Sidebar
+    SidebarModule, 
   ],
-  providers: [SharedService], // Les services doivent être déclarés ici
-  bootstrap: [AppComponent], // AppComponent est le point d'entrée de l'application
+  providers: [SharedService],
+  bootstrap: [AppComponent], 
 })
 export class AppModule {}

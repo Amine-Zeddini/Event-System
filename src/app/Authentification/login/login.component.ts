@@ -31,7 +31,7 @@ export class LoginComponent {
         formData.password === 'admin1234'
       ) {
         console.log('Login successful');
-        localStorage.setItem('authToken', 'myToken'); // Replace with real token
+        localStorage.setItem('authToken', 'myToken');
 
         this.router.navigate(['/acceuil']);
       } else {
